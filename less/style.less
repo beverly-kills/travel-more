@@ -1,0 +1,408 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+
+@font-face{
+	font-family: Aleo;
+	src: url(../fonts/Aleo-Font/Desktop-OTF/Aleo-Regular.otf);
+}
+
+/*colors*/
+
+@blue: rgb(84, 116, 253);
+@blue-button: rgb(73, 107, 254);
+@gray: rgb(51, 51, 51);
+@pink: #ff6363;
+
+/*common styles*/
+
+.logo-mix{
+	font-weight: 700;
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 26px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.sub-logo{
+	font-weight: 400;
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 26px;
+	color: #fff;
+	text-transform: capitalize;
+}
+
+.border-box{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.h100{
+	height: 100%;
+}
+
+.flex{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.fd-column{
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}
+
+.jc-flex-end{
+	justify-content: flex-end;
+}
+
+.space-between{
+	justify-content: space-between;
+}
+
+.ai-center{
+	align-items: center;
+}
+
+.grid{
+	display: grid;
+}
+
+.ta-center{
+	text-align: center;
+}
+
+.relative{
+	position: relative;
+}
+
+.absolute{
+	position: absolute;
+}
+
+.container{
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+.heading{
+	margin-bottom: 75px;
+	font: 400 36px/26px Aleo, serif;
+	color: #fff;
+	text-transform: capitalize;
+}
+
+.heading--small{
+	font:400 20px/26px 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+.paragraph{
+	/*margin-bottom: 50px;*/
+	color: #e8e8e8;
+	font: 400 16px/26px 'Josefin Sans', sans-serif;
+}
+
+.button{
+	height: 60px;
+	background-color: @blue-button;
+	border: none;
+	color: #fff;
+	font: 400 14px/26px Aleo, serif;
+	text-transform: uppercase;
+
+	&:hover{
+		background-color: @pink;
+	}
+}
+
+.quot-symbol{
+	color: @blue;
+	position: relative;
+	bottom: 10px;
+}
+
+/*HEADER styles*/
+.header{
+	height: 820px;
+	padding-top: 280px;
+	background: url(../img/header-bg.jpg) no-repeat 50% center;
+}
+
+.first-screen{
+	justify-content: center;
+}
+
+.first-screen__logo{
+	.logo-mix;
+	font-size: 48px;
+	margin-bottom: 25px;
+	letter-spacing: 3px;
+}
+
+.first-screen__sub-logo{
+	font-size: 22px;
+	letter-spacing: 5px;
+	margin-bottom: 60px;
+}
+
+.first-screen__form{
+	width: 650px;
+	height: 60px;
+}
+
+.first-screen__form--search{
+	width: 500px;
+	border: none;
+	font: 400 14px/26px 'Josefin Sans', sans-serif;
+	color: @blue;
+}
+
+.first-screen__form--search::placeholder{
+	color: #999999;
+}
+
+.first-screen__form--button{
+	width: 150px;
+	border: 2px solid #fff;
+}
+
+.scroll{
+	width: 95px;
+	height: 35px;
+	bottom: 215px;
+	left: 50%;
+	margin-left: -48px;
+	background: url(../img/scroll.png) no-repeat bottom;
+	text-transform: capitalize;
+	color: #fff;
+	font: 400 14px/26px 'Josefin Sans', sans-serif;
+	text-decoration: none;
+	letter-spacing: 1px;
+	transition: transform .2s ease-in;
+
+	&:hover{
+	transform: translateY(10px);
+	}
+}
+
+.header__bot{
+	bottom: 0;
+	height: 80px;
+	width: 100%;
+	background-color: @blue;
+}
+
+.logo{
+	.logo-mix;
+	font-size: 24px;
+}
+
+.menu{
+	list-style: none;
+	padding: 0;
+}
+
+.menu__element{
+	display: inline-block;
+	text-transform: uppercase;
+	font: 400 14px/26px Aleo, serif;
+
+	&:not(:last-child){
+	margin-right: 40px;
+	}
+}
+
+.menu__link{
+	text-decoration:none;
+	color: #fff;
+
+	&:hover{
+	text-shadow: 2px 2px @gray;
+	}
+}
+
+/*WHY US styles*/
+
+.why-us{
+	justify-content: space-between;
+	height: 685px;
+	padding: 120px;
+	background: url(../img/why-us-bg.jpg) no-repeat 50% center;
+}
+
+.why-us__text{
+	width: 530px;
+}
+
+.why-us__paragraph{
+	margin-bottom: 50px;
+}
+
+.why-us__button{
+	width: 225px;
+}
+
+.why-us__photos{
+	grid-template: 220px 220px / 125px 225px 125px;
+	grid-column-gap: 0;
+	grid-row-gap: 5px;
+}
+
+.why-us__photos--1{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	transition: transform .2s ease-in;
+
+	&:hover{
+	transform: rotate(20deg) scale(1.2);
+	}
+}
+
+.why-us__photos--2{
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	transition: transform .2s ease-in;
+
+	&:hover{
+	transform: translateX(20px) scale(1.2);
+	}
+}
+
+/*SERVICES styles*/
+
+.services{
+	height: 337px;
+	background-color: @gray;
+}
+
+.services__decoration{
+	z-index: 1;
+	border-top: 1px dotted #ccc;
+	border-radius: 50%;
+	width: 38%;
+	height: 85%;
+}
+
+.services__decoration--left{
+	left: 11%;
+}
+
+.services__decoration--right{
+	right: 11%;
+}
+
+.services__image--wrap{
+	border-radius: 50%;
+	background-color:  #333333;
+	width: 96px;
+	height: 96px;
+	justify-content: center;
+	z-index: 2;
+}
+
+.services__image--icon{
+	align-self: center;
+}
+
+/*TOURS styles*/
+
+.tours__section{
+	height: 700px;
+	padding-bottom: 100px;
+}
+
+.tours__section--flex{
+	align-items: flex-end;
+}
+
+.tours__first{
+	background: url(../img/tours-bg1.jpg) no-repeat 50% center;
+}
+
+.tours__second{
+	background: url(../img/tours-bg2.jpg) no-repeat 50% center;
+}
+
+.tours__offer{
+	background-color: rgba(35, 35, 35, 0.9);
+	width: 540px;
+	height: 370px;
+	padding: 50px 30px;
+	justify-content: space-between;
+}
+
+.tours__offer--country{
+	font:400 20px/26px 'Josefin Sans', sans-serif;
+	color: #e8e8e8;
+}
+
+.tours__offer--program{
+	color: #fff;
+}
+
+.tours__button{
+	width: 225px;
+}
+
+/*FEEDBACK styles*/
+
+.feedback{
+	background: url(../img/feedback-bg.jpg) no-repeat 50% center;
+	padding: 130px 0 200px;
+}
+
+.feedback__block{
+	width: 100%;
+	height: 284px;
+}
+
+.feedback__text{
+	background-color: @gray;
+	padding: 40px 60px;
+}
+
+.feedback__name{
+	color: #fefefe;
+}
+
+.feedback__paragraph{
+	margin: 0;
+}
+
+/*FOOTER styles*/
+
+.footer{
+	height: 268px;
+	padding-top: 120px;
+	background-color: #232323;
+}
+
+.footer__info{
+	margin: 0 auto;
+}
+
+.footer__sub-logo{
+	font-size: 15px;
+}
+
+.footer__social{
+	width: 11%;
+}
+
+.footer__icon{
+	color:  #e8e8e8;
+
+	&:hover{
+		color: @blue;
+	}
+}
